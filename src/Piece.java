@@ -1,5 +1,19 @@
 
-public class Piece {
+public class Piece implements Comparable{
+	@Override
+	public int compareTo(Object arg0) {
+		// TODO Auto-generated method stub
+		Piece p = (Piece)arg0;
+		if(row < p.row)
+			return -1;
+		else if(row > p.row)
+			return 1;
+		else if(col > p.col)
+			return 1;
+		else if(col < p.col)
+			return -1;
+		return 0;
+	}
 	int row, col;
 	char symbol;
 	public Piece(int row, int col, char symbol) {

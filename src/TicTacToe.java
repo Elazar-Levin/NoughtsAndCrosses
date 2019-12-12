@@ -13,6 +13,10 @@ public class TicTacToe {
 		moves = new Stack<>();
 		
 	}
+	public char getCurrPlayer()
+	{
+		return currPlayer;
+	}
 	public Piece getPiece(int row, int col)
 	{
 		return getPiece(new Position(row, col));
@@ -34,7 +38,7 @@ public class TicTacToe {
 		return move(new Position(row, col));
 	}
 	
-	private boolean move(Position pos)
+	public boolean move(Position pos)
 	{
 		if(pos.row < 0 || pos.row >= 3 || pos.col < 0 || pos.col >= 3)
 			return false;
